@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}
+Student Details
+{% endblock title %}
+
+
+
+{% block body %}
+ <h3 class="text-center mt-3"><span>Student Details</span></h3>
+  
+{% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+
+<div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+    {{message}}
+
+
+</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+<br>
+
+
+<div class="table-responsive">
+<table class="table table-striped table-hover table-bordered shadow-sm">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">SID</th>
+      <th scope="col">Roll No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Sem</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Address</th>
+      <th scope="col">Actions</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% if query %}
+  {% for post in query %}
+    <tr>
+      <td>{{post.id}}</td>
+      <td><strong>{{post.rollno}}</strong></td>
+      <td>{{post.sname}}</td>
+      <td>{{post.sem}}</td>
+      <td>{{post.gender}}</td>
+      <td>{{post.branch}}</td>
+      <td>{{post.email}}</td>
+      <td>{{post.number}}</td>
+      <td>{{post.address}}</td>
+    <td>
+      <a href="/edit/{{post.id}}" class="btn btn-sm btn-primary" title="Edit"><i class="fa fa-edit"></i></a>
+      <a href="/delete/{{post.id}}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this student?');" title="Delete"><i class="fa fa-trash"></i></a>
+    </td>
+    </tr>
+{% endfor %}
+{% else %}
+    <tr>
+      <td colspan="10" class="text-center">No students found. Add students to get started!</td>
+    </tr>
+{% endif %}
+  
+  </tbody>
+</table>
+</div>
+
+
+
+
+
+
+{% endblock body %}

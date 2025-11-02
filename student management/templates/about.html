@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}
+About
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4"><span>About Student Management System</span></h2>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h4 class="card-title text-primary">Project Overview</h4>
+                    <p class="card-text">
+                        The Student Management System is a comprehensive web-based application designed to manage student records, 
+                        attendance, and academic departments efficiently. This system demonstrates the implementation of CRUD 
+                        (Create, Read, Update, Delete) operations with a MySQL database backend.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-success"><i class="fa fa-check-circle"></i> Key Features</h5>
+                    <ul>
+                        <li>Complete CRUD operations for student records</li>
+                        <li>Department/Branch management</li>
+                        <li>Attendance tracking system</li>
+                        <li>User authentication and authorization</li>
+                        <li>Database triggers for audit logging</li>
+                        <li>Search functionality by roll number</li>
+                        <li>Responsive Bootstrap UI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-info"><i class="fa fa-code"></i> Technology Stack</h5>
+                    <ul>
+                        <li><strong>Backend:</strong> Python 3.14, Flask 3.1.2</li>
+                        <li><strong>Database:</strong> MySQL/MariaDB</li>
+                        <li><strong>ORM:</strong> SQLAlchemy 2.0.44</li>
+                        <li><strong>Authentication:</strong> Flask-Login</li>
+                        <li><strong>Frontend:</strong> HTML5, CSS3, Bootstrap 5</li>
+                        <li><strong>JavaScript:</strong> jQuery, AOS, Owl Carousel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm mb-5">
+                <div class="card-body">
+                    <h5 class="card-title text-warning"><i class="fa fa-graduation-cap"></i> Educational Purpose</h5>
+                    <p class="card-text">
+                        This project is developed as a <strong>DBMS Mini-Project</strong> to demonstrate practical 
+                        knowledge of database management, web development, and full-stack application architecture. 
+                        It showcases various database concepts including:
+                    </p>
+                    <ul>
+                        <li>Database design and normalization</li>
+                        <li>SQL triggers and stored procedures</li>
+                        <li>CRUD operations and data validation</li>
+                        <li>User authentication and session management</li>
+                        <li>MVC architecture pattern</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
